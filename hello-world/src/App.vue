@@ -21,7 +21,7 @@
         </v-btn>
       </v-app-bar>
 
-      <v-sheet id="scrolling-techniques-7" class="overflow-y-auto" max-height="600">
+      <v-sheet id="scrolling-techniques-7" class="overflow-y-auto" max-height="660">
         <v-container style="height: 1500px; margin-top:60px;">
           <v-content>
             <HelloWorld />
