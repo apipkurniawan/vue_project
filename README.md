@@ -1,6 +1,7 @@
 # vue_project
 study about vue programming
 
+Getting-Started
 Doc (https://cli.vuejs.org/guide/)
 step :
 1. npm install -g @vue/cli 
@@ -16,6 +17,27 @@ step :
    (untuk menjalankan aplikasi)
 
 
+customize UI
 Doc (https://vuetifyjs.com/en/getting-started/quick-start/)
 step :
 1. vue add vuetify
+
+
+customize Icons
+Doc (https://vuetifyjs.com/en/customization/icons/)
+step :
+1. npm install @mdi/font -D
+2. masukan code berikut
+
+   // src/plugins/vuetify.js
+   import '@mdi/font/css/materialdesignicons.css' // tambah code ini
+   import Vue from 'vue'
+   import Vuetify from 'vuetify/lib'
+
+   Vue.use(Vuetify)
+
+   export default new Vuetify({
+   icons: {  // tambah code ini
+      iconfont: 'mdi', // tambah code ini
+   }, // tambah code ini
+   })
