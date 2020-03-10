@@ -2,7 +2,7 @@
 study about vue programming
 
 Getting-Started
-Doc (https://cli.vuejs.org/guide/)
+- Doc Vue : https://cli.vuejs.org/guide/
 step :
 1. npm install -g @vue/cli 
    (pastikan sudah terinstall node-js version 8.9 or above (8.11.0+ recommended))
@@ -18,13 +18,14 @@ step :
 
 
 customize UI
-Doc (https://vuetifyjs.com/en/getting-started/quick-start/)
+- List Vue UI Component Libraries : https://www.codeinwp.com/blog/vue-ui-component-libraries/
+- Doc Vuetify : https://vuetifyjs.com/en/getting-started/quick-start/
 step :
 1. vue add vuetify
 
 
 customize Icons
-Doc (https://vuetifyjs.com/en/customization/icons/)
+- Doc Icons : https://vuetifyjs.com/en/customization/icons/
 step :
 1. npm install @mdi/font -D
 2. masukan code berikut
