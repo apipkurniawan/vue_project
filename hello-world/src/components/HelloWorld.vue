@@ -29,158 +29,124 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <br />
+    <v-btn large :disabled="btn">Disabled</v-btn>&nbsp;
+    <v-btn
+      large
+      class="ma-2"
+      :loading="loading"
+      :disabled="loading"
+      color="info"
+      @click="loader = 'loading'"
+    >
+      Icon Loader
+      <template v-slot:loader>
+        <span>Loading...</span>
+      </template>
+    </v-btn>
+
+    <p v-if="seen">Now You See Me</p>
+    <p>Computed message: "{{ nama }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
   </v-container>
 </template>
 
-<!-- not used -->
-<!-- <template>
-  <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-      </v-col>
+<style scoped>
+.custom-loader {
+  animation: loader 1s infinite;
+  display: flex;
+}
 
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
-        </h1>
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
 
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
-          <a
-            href="https://community.vuetifyjs.com"
-            target="_blank"
-          >Discord Community</a>
-        </p>
-      </v-col>
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          What's next?
-        </h2>
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
 
-        <v-row justify="center">
-          <a
-            v-for="(next, i) in whatsNext"
-            :key="i"
-            :href="next.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ next.text }}
-          </a>
-        </v-row>
-      </v-col>
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Important Links
-        </h2>
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
 
-        <v-row justify="center">
-          <a
-            v-for="(link, i) in importantLinks"
-            :key="i"
-            :href="link.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ link.text }}
-          </a>
-        </v-row>
-      </v-col>
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-      <v-col
-        class="mb-5"
-        cols="12"
-      >
-        <h2 class="headline font-weight-bold mb-3">
-          Ecosystem
-        </h2>
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
 
-        <v-row justify="center">
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-row>
-      </v-col>
-    </v-row>
-  </v-container>
-</template> -->
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
 
 <script>
 export default {
   name: "HelloWorld",
 
   data: () => ({
-    ecosystem: [
-      {
-        text: "vuetify-loader",
-        href: "https://github.com/vuetifyjs/vuetify-loader"
-      },
-      {
-        text: "github",
-        href: "https://github.com/vuetifyjs/vuetify"
-      },
-      {
-        text: "awesome-vuetify",
-        href: "https://github.com/vuetifyjs/awesome-vuetify"
+    nama: "apip kurniawan",
+    alamat: "jakarta",
+    a: 1,
+    b: 2,
+    list: {
+      c: "tes"
+    },
+
+    btn: false,
+    loader: null,
+    loading: false,
+    seen: false
+  }),
+  computed: {
+    reversedMessage: function() {
+      return this.nama
+        .split("")
+        .reverse()
+        .join("");
+    }
+  },
+  watch: {
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
+      if (this.btn == true) {
+        setTimeout(() => {
+          this[l] = false;
+          this.btn = false;
+          this.seen = false;
+        }, 3000);
+      } else {
+        setTimeout(() => {
+          this[l] = false;
+          this.btn = true;
+          this.seen = true;
+        }, 3000);
       }
-    ],
-    importantLinks: [
-      {
-        text: "Documentation",
-        href: "https://vuetifyjs.com"
-      },
-      {
-        text: "Chat",
-        href: "https://community.vuetifyjs.com"
-      },
-      {
-        text: "Made with Vuetify",
-        href: "https://madewithvuejs.com/vuetify"
-      },
-      {
-        text: "Twitter",
-        href: "https://twitter.com/vuetifyjs"
-      },
-      {
-        text: "Articles",
-        href: "https://medium.com/vuetify"
-      }
-    ],
-    whatsNext: [
-      {
-        text: "Explore components",
-        href: "https://vuetifyjs.com/components/api-explorer"
-      },
-      {
-        text: "Select a layout",
-        href: "https://vuetifyjs.com/layout/pre-defined"
-      },
-      {
-        text: "Frequently Asked Questions",
-        href: "https://vuetifyjs.com/getting-started/frequently-asked-questions"
-      }
-    ]
-  })
+      this.loader = null;
+    }
+  },
+  created: function() {
+    console.log("initialize");
+  }
 };
 </script>
