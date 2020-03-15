@@ -60,6 +60,10 @@ https://www.vuemastery.com/courses/real-world-vue-js/real-world-intro
    - HTML5 History Mode
    - Adding to Example App
 6. Single file vue components
+   - Component Anatomy
+   - Nested Components
+   - Global & Scoped Style
+   - Add to our App
 7. Global component
 8. Slots
 9. API calls with axios
