@@ -1,23 +1,45 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import VueRouter from "vue-router"; // include the vue router library
+// import Home from "../views/Home.vue";
+// import Contact from "../views/Contact.vue";
+import EventCreate from "../views/EventCreate.vue";
+import EventList from "../views/EventList.vue";
+import EventShow from "../views/EventShow.vue";
 
-Vue.use(VueRouter);
+Vue.use(VueRouter); // use the router
 
 const routes = [
+  // {
+  //   path: "/", // the URL
+  //   name: "Home", // name of the route
+  //   component: Home // which component to render 
+  // },
+  // {
+  //   path: "/about",
+  //   name: "about",
+  //   component: () =>
+  //     import( /* webpackChunkName: "about" */ "../views/About.vue")
+  // },
+  // {
+  //   path: "/contact-us",
+  //   name: "contact",
+  //   component: Contact,
+  //   alias: "/contact"
+  // },
   {
-    path: "/",
-    name: "Home",
-    component: Home
+    path: "/event-create",
+    name: "event-create",
+    component: EventCreate,
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/",
+    name: "event-list",
+    component: EventList,
+  },
+  {
+    path: "/event",
+    name: "event-show",
+    component: EventShow,
   }
 ];
 
