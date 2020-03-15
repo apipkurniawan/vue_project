@@ -73,3 +73,7 @@ https://www.vuemastery.com/courses/real-world-vue-js/real-world-intro
    - Default Slot Content
    - Named slots
 9. API calls with axios
+   - Get Started with Axios
+   - Make API Calls
+   - Component LifeCycle
+   - Creating Service
