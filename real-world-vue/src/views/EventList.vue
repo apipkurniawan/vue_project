@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Events Listing</h1>
+    <!-- nested component -->
     <EventCard />
   </div>
 </template>
