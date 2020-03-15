@@ -1,25 +1,21 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- a component which creates a link to navigate to a route -->
-      <!-- cara 1 -->
-      <!-- <router-link to="/">Home</router-link> | -->
-      <!-- <router-link to="/about">About</router-link> | -->
-      <!-- cara 2 with binding -->
-      <!-- <router-link :to="{ name: 'contact' }">Contact</router-link> -->
-
-      <router-link :to="{ name: 'event-list' }">List</router-link> |
-      <router-link :to="{ name: 'event-create' }">Create</router-link> |
-      <router-link
-        :to="{ name: 'user', params: { username: 'apip kurniawan' } }"
-        >User</router-link
-      >
+      <NavBar></NavBar>
     </div>
     <!-- a placeholder which renders the matched component -->
     <router-view />
   </div>
 </template>
 
+<script>
+import NavBar from '@/components/NavBar.vue'
+export default {
+  components: {
+    NavBar
+  }
+}
+</script>
 <style>
 html {
   -webkit-text-size-adjust: 100%;

@@ -1,22 +1,24 @@
-<template lang="pug">
-  <div class="event-card -shadow">
-  <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
-  <h4 class="title">{{ event.title }}</h4>
-  <span>{{ event.ettendees.length }} attending</span>
-  </div>
+<template>
+  <router-link class="event-link" :to="{ name: 'event-show', params: { id: '1' } }">
+    Show event #1
+    <div class="event-card -shadow">
+      <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
+      <h4 class="title">{{ event.title }}</h4>
+      <span>{{ event.attendees.length }} attending</span>
+    </div>
+  </router-link>
 </template>
 
-<script lang="ts">
+<script>
 export default {
-  name: 'EventCard',
   data() {
     return {
       event: {
         id: 1,
         title: 'Beach CleanUp',
-        date: 'Tue May 15 2020',
+        date: 'Tues May 15 2020',
         time: '6:00',
-        attendess: [
+        attendees: [
           { id: 'abc123', name: 'Adam Jahr' },
           { id: 'def456', name: 'Apip Kurniawan' }
         ]
@@ -26,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .event-card {
   padding: 20px;
   margin-bottom: 24px;
