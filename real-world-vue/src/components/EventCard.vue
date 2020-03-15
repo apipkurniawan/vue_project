@@ -6,9 +6,7 @@
       <h4 class="title">{{ event.title }}</h4>
 
       <!-- global component -->
-      <BaseIcon name="users" />
-
-      <span>{{ event.attendees.length }} attending</span>
+      <BaseIcon name="users">{{ event.attendees.length }} attending</BaseIcon>
     </div>
   </router-link>
 </template>

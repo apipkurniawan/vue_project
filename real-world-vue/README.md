@@ -69,4 +69,7 @@ https://www.vuemastery.com/courses/real-world-vue-js/real-world-intro
    - Automatic Registration
    - Create Icon Component
 8. Slots
+   - Basic Slots
+   - Default Slot Content
+   - Named slots
 9. API calls with axios
