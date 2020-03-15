@@ -64,6 +64,9 @@ https://www.vuemastery.com/courses/real-world-vue-js/real-world-intro
    - Nested Components
    - Global & Scoped Style
    - Add to our App
-7. Global component
+7. Global components
+   - Why & When use Global?
+   - Automatic Registration
+   - Create Icon Component
 8. Slots
 9. API calls with axios
