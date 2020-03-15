@@ -36,6 +36,14 @@ Doc Vue : https://cli.vuejs.org/guide/
 8. pick additional lint features : Lint On Save
 9. save as a new preset : Continue without saving
 
+\* customize Vs Code
+-- add extention :
+
+1. vetur
+2. Eslint
+3. Prettier
+4. copy realtive path
+
 \* Customize UI
 
 - List Vue UI Component Libraries : https://www.codeinwp.com/blog/vue-ui-component-libraries/
