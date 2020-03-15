@@ -9,8 +9,11 @@
       <!-- <router-link :to="{ name: 'contact' }">Contact</router-link> -->
 
       <router-link :to="{ name: 'event-list' }">List</router-link> |
-      <router-link :to="{ name: 'event-show' }">Show Event #1</router-link> |
-      <router-link :to="{ name: 'event-create' }">Create</router-link>
+      <router-link :to="{ name: 'event-create' }">Create</router-link> |
+      <router-link
+        :to="{ name: 'user', params: { username: 'apip kurniawan' } }"
+        >User</router-link
+      >
     </div>
     <!-- a placeholder which renders the matched component -->
     <router-view />

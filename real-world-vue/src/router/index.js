@@ -2,9 +2,11 @@ import Vue from "vue";
 import VueRouter from "vue-router"; // include the vue router library
 // import Home from "../views/Home.vue";
 // import Contact from "../views/Contact.vue";
+import NotFoundComponent from "../views/NotFoundComponent.vue";
 import EventCreate from "../views/EventCreate.vue";
 import EventList from "../views/EventList.vue";
 import EventShow from "../views/EventShow.vue";
+import User from "../views/User.vue";
 
 Vue.use(VueRouter); // use the router
 
@@ -27,7 +29,7 @@ const routes = [
   //   alias: "/contact"
   // },
   {
-    path: "/event-create",
+    path: "/event/create",
     name: "event-create",
     component: EventCreate,
   },
@@ -37,9 +39,19 @@ const routes = [
     component: EventList,
   },
   {
-    path: "/event",
+    path: "/event/:id",
     name: "event-show",
     component: EventShow,
+  },
+  {
+    path: "/user/:username",
+    name: "user",
+    component: User,
+    props: true
+  },
+  {
+    path: '*',
+    component: NotFoundComponent
   }
 ];
 
