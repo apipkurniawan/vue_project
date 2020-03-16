@@ -77,3 +77,21 @@ https://www.vuemastery.com/courses/real-world-vue-js/real-world-intro
    - Make API Calls
    - Component LifeCycle
    - Creating Service
+
+\*\*\* course beginner (Mastering Vuex)
+https://www.vuemastery.com/courses/mastering-vuex/intro-to-vuex
+
+1. Intro to Vuex
+2. Mastering Vuex Orientation
+3. State & Getters
+   - Accessing State
+   - The mapState Helper
+   - Object Spread Operator
+   - Getters
+   - Dynamic Getters
+   - The mapGetter Helper
+4. Mutations & Actions Pt. 1
+   -
+5. Mutations & Actions Pt. 2
+6. Modules
+7. Success & Error Notifications

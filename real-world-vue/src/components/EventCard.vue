@@ -1,8 +1,5 @@
 <template>
-  <router-link
-    class="event-link"
-    :to="{ name: 'event-show', params: { id: event.id } }"
-  >
+  <router-link class="event-link" :to="{ name: 'event-show', params: { id: event.id } }">
     Show event
     <div class="event-card -shadow">
       <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
