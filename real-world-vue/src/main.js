@@ -5,6 +5,9 @@ import store from "./store";
 
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+
+// for registration all component with lodash
+// Automatic Global Registration of Base Components
 const requireComponent = require.context('./components', false, /Base[A-Z]\w+\.(vue|js)$/)
 
 requireComponent.keys().forEach(fileName => {

@@ -12,10 +12,10 @@
     <address>{{ event.location }}</address>
     <h2>Event Details</h2>
     <p>{{ event.description }}</p>
-    <!-- <h2>
+    <h2>
       Attendees
       <span class="badge -fill-gradient">{{ event.attendees ? event.attendees.length:0 }}</span>
-    </h2> -->
+    </h2>
     <h5>Organized by {{ event.organizer ? event.organizer.name : '' }}</h5>
     <ul class="list-group">
       <li

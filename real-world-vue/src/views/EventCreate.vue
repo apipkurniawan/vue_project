@@ -88,25 +88,12 @@ export default {
     }
     return {
       // incrementBy: 1
-      event: this.createFreshEvent(),
       times,
-      categories: this.$store.state.categories
+      categories: this.$store.state.categories,
+      event: this.createFreshEventObject()
     }
   },
   methods: {
-    createFreshEvent() {
-      const user = this.$store.state.user
-      return {
-        category: '',
-        organizer: user,
-        title: '',
-        description: '',
-        location: '',
-        date: '',
-        time: '',
-        attendees: []
-      }
-    },
     createEvent() {
       this.$store
         .dispatch('createEvent', this.event)
@@ -120,7 +107,23 @@ export default {
         .catch(() => {
           console.log('There was a problem creating your event')
         })
-    }
+    },
+    createFreshEventObject() {
+      const user = this.$store.state.user
+      const id = Math.floor(Math.random() * 10000000)
+      return {
+        id:id,
+        user:user,
+        category: '',
+        organizer: user,
+        title: '',
+        description: '',
+        location: '',
+        date: '',
+        time: '',
+        attendees: []
+      }
+    },
   }
 }
 </script>
